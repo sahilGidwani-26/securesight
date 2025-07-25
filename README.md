@@ -45,10 +45,6 @@ Camera 1, Camera 2, Camera 3
 
 # Installation (Local)
 
-# Clone the repo
-git clone https://github.com/your-username/securesight.git
-cd securesight-backend
-
 # Install backend dependencies
 npm install
 
