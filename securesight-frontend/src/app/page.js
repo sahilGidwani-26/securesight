@@ -5,14 +5,14 @@ export default function HomePage() {
   const [incidents, setIncidents] = useState([]);
 
   useEffect(() => {
-    fetch('https://securesight-backend.onrender.com')
+    fetch('https://securesight-backend.onrender.com/api/incidents')
       .then((res) => res.json())
       .then((data) => setIncidents(data))
       .catch((err) => console.error("Error fetching incidents:", err));
   }, []);
 
   const handleResolve = async (id) => {
-    await fetch("https://securesight-backend.onrender.com", { method: 'PATCH' });
+    await fetch(`https://securesight-backend.onrender.com/api/incidents/${id}/resolve`, { method: 'PATCH' });
     setIncidents((prev) => prev.filter((i) => i.id !== id));
   };
 
