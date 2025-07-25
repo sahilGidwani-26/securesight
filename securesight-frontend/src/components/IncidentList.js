@@ -6,7 +6,7 @@ export default function IncidentList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-  fetch('http://localhost:4000/api/incidents')
+  fetch('https://securesight-backend.onrender.com')
     .then((res) => res.json())
     .then((data) => {
       console.log('Fetched incidents:', data);
